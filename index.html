@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>30500-@@@</title>
+		<style>
+			body {background-image:url('./img/bg2.jpg');}
+		</style>
+		<script type="text/javascript">
+			// F12 버튼 방지
+			<!--F12 키코드 막기-->
+
+			function keydowncheck()
+			{
+			var result = true;
+			var keycode = event.keyCode;
+			if(123 == keycode) //F12 키코드
+			{
+			result = false;
+			}
+			return result;
+			}
+						
+			// 우측 클릭 방지
+			document.onmousedown=disableclick;
+			status="Right click is not available.";
+    
+			function disableclick(event){
+				if (event.button==2) {
+					alert(status);
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body onkeydown="return keydowncheck();" oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+	     <table border="0" bgcolor="black" cellpadding="10" cellspacing="1" width="800" height="600">
+	     	<tr  height="15%"  bgcolor="white">
+				<td colspan="3"><center><a href="index.html">홈</a> | <a href="pf.html">프로필</a> | <a href="subject.html">학습과제</a>  </center></td>				
+				
+			</tr>
+			<tr bgcolor="white">
+				<td colspan="2"><center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile23.uf.tistory.com%2Fimage%2F2657B9505809B4B634FF66" width="600px"></center></td>
+				
+				
+			</tr>
+			<tr height="5%"  bgcolor="white">
+				<td  colspan="3"><center>Copyright by GMS</center></td>
+				
+			</tr>
+	     </table>
+	</body>
+</html>
